@@ -13,7 +13,6 @@ public class MyControllerAdvice {
 	@ExceptionHandler(value = MyRunException.class)
 	public Map<String, Object> exceptionHandler(MyRunException ex) {
 		Map<String, Object> map = new HashMap<String, Object>();
-
 		map.put("code", ex.getMyErrorMessage().getCode());
 		map.put("message", ex.getMyErrorMessage().getMessage());
 		map.put("data", ex.getMyErrorMessage().getDate());
